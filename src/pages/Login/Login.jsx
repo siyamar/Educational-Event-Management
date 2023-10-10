@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = () => {
-  const {signIn} = useContext(AuthContext)
+  const {signIn, signInWithGoogle} = useContext(AuthContext)
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -23,7 +23,11 @@ const Login = () => {
         .catch(error=>{
             console.log(error)
         })
-
+  }
+  const handleGoogleSignIn =()=>{
+    signInWithGoogle()
+    .then()
+    .catch()
   }
   return (
     <div>
@@ -64,12 +68,15 @@ const Login = () => {
             <button className="btn btn-primary">Login</button>
           </div>
         </form>
+        <div className="flex items-center justify-center gap-6">
         <p className="text-center mt-4">
           Do not have an account?{" "}
           <Link className="text-blue-600" to={"/register"}>
             Register
           </Link>
         </p>
+        <p className="text-center mt-4">Login With Google <button onClick={handleGoogleSignIn} className="btn btn-secondary">Google</button></p>
+        </div>
       </div>
     </div>
   );
