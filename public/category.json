@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "Technology"
+    },
+    {
+      "id": 2,
+      "name": "Marketing"
+    },
+    {
+      "id": 3,
+      "name": "Data Science"
+    },
+    {
+      "id": 4,
+      "name": "Photography"
+    },
+    {
+      "id": 5,
+      "name": "Finance"
+    }
+  ]
+  
