@@ -7,6 +7,7 @@ import Error from "../pages/Error/Error";
 import About from "../pages/About/About";
 import EventDetails from "../pages/EventDetails/EventDetails";
 import PrivateRoute from "./PrivateRoute";
+import Enroled from "../pages/Enroled/Enroled";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <About></About>,
+            },
+            {
+                path: '/enrolled',
+                element: <PrivateRoute><Enroled></Enroled></PrivateRoute>
             },
             {
                 path:'/eventDetails/:id',

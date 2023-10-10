@@ -3,6 +3,7 @@ import Footer from '../shared/Footer/Footer';
 import { useLoaderData } from 'react-router-dom';
 import EventCards from './EventCards';
 import RightSideNav from '../shared/RightSideNav/RightSideNav'
+import Banner from './Banner';
 
 const Home = () => {
     const events = useLoaderData()
@@ -10,6 +11,7 @@ const Home = () => {
         <div>
             <div className='max-w-6xl mx-auto space-y-4'>
             <Navbar></Navbar>
+            <Banner></Banner>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-6'>
                 <div className='md:col-span-3 grid grid-cols-2 gap-6'>
                     {
